@@ -1,9 +1,6 @@
 package shapes;
 
-
-/**
- * A graphical shape.
- */
+/** A graphical shape. */
 public interface Shape {
-	<Result> Result accept(ShapeVisitor<Result> v);
+  <Result> Result accept(ShapeVisitor<Result> v);
 }

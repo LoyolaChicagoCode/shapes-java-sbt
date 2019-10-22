@@ -5,35 +5,35 @@ public class Size implements ExtendedShapeVisitor<Integer> {
 
   // TODO entirely your job
 
-  public Integer visitPolygon(Polygon p) {
+  public Integer visitPolygon(final Polygon p) {
     return -1;
   }
 
-  public Integer visitCircle(Circle c) {
+  public Integer visitCircle(final Circle c) {
     return -1;
   }
 
-  public Integer visitGroup(Group g) {
+  public Integer visitGroup(final Group g) {
     return -1;
   }
 
-  public Integer visitRectangle(Rectangle q) {
+  public Integer visitRectangle(final Rectangle q) {
     return -1;
   }
 
-  public Integer visitOutline(Outline o) {
+  public Integer visitOutline(final Outline o) {
     return -1;
   }
 
-  public Integer visitFilled(Filled c) {
+  public Integer visitFilled(final Filled c) {
     return -1;
   }
 
-  public Integer visitLocation(Location l) {
+  public Integer visitLocation(final Location l) {
     return -1;
   }
 
-  public Integer visitStroke(Stroke c) {
+  public Integer visitStroke(final Stroke c) {
     return -1;
   }
 }

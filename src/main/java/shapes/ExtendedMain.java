@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 
 public class ExtendedMain {
 
-  public static void main(String[] args) {
+  public static void main(final String[] args) {
     final int padding = 20;
     try {
       // see also shapes.Main
@@ -41,11 +41,11 @@ public class ExtendedMain {
                                       new Stroke(Color.ORANGE, new Outline(new Circle(50))))))))));
       final Location b = s.accept(new ExtendedBoundingBox());
       final Rectangle r = (Rectangle) b.getShape();
-      JFrame f = new JFrame();
+      final JFrame f = new JFrame();
       f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      JPanel p =
+      final JPanel p =
           new JPanel() {
-            public void paintComponent(Graphics g) {
+            public void paintComponent(final Graphics g) {
               g.translate(-b.getX() + padding, -b.getY() + padding);
               s.accept(new ExtendedDraw(g));
               s.accept(new ExtendedBoundingBox()).accept(new ExtendedDraw(g));
@@ -55,13 +55,13 @@ public class ExtendedMain {
       f.setContentPane(p);
       f.pack();
       f.setVisible(true);
-    } catch (Throwable ex) {
+    } catch (final Throwable ex) {
     }
-    JFrame g = new JFrame();
+    final JFrame g = new JFrame();
     g.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    JPanel q =
+    final JPanel q =
         new JPanel() {
-          public void paintComponent(Graphics g) {
+          public void paintComponent(final Graphics g) {
             g.translate(-10, -60);
             g.translate(50, 100);
             g.drawArc(-20, -20, 40, 40, 0, 360);

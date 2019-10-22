@@ -7,7 +7,7 @@ public class Filled implements Shape {
 
   protected final Shape shape;
 
-  public Filled(Shape shape) {
+  public Filled(final Shape shape) {
     this.shape = shape;
   }
 
@@ -15,7 +15,7 @@ public class Filled implements Shape {
     return shape;
   }
 
-  public <Result> Result accept(ShapeVisitor<Result> v) {
+  public <Result> Result accept(final ShapeVisitor<Result> v) {
     return v.visitFilled(this);
   }
 }

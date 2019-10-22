@@ -9,7 +9,7 @@ public class Group implements Shape {
 
   protected final List<? extends Shape> shapes;
 
-  public Group(Shape... shapes) {
+  public Group(final Shape... shapes) {
     this.shapes = Arrays.asList(shapes);
   }
 
@@ -17,7 +17,7 @@ public class Group implements Shape {
     return Collections.unmodifiableList(shapes);
   }
 
-  public <Result> Result accept(ShapeVisitor<Result> v) {
+  public <Result> Result accept(final ShapeVisitor<Result> v) {
     return v.visitGroup(this);
   }
 }

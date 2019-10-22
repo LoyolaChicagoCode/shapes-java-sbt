@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 
 public class Main {
 
-  public static void main(String[] args) {
+  public static void main(final String[] args) {
     final int padding = 20;
     try {
       // define a complex group of shapes
@@ -35,11 +35,11 @@ public class Main {
       final Location b = s.accept(new BoundingBox());
       final Rectangle r = (Rectangle) b.getShape();
       // draw it in a frame centered around the bounding box
-      JFrame f = new JFrame();
+      final JFrame f = new JFrame();
       f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      JPanel p =
+      final JPanel p =
           new JPanel() {
-            public void paintComponent(Graphics g) {
+            public void paintComponent(final Graphics g) {
               g.translate(-b.getX() + padding, -b.getY() + padding);
               s.accept(new Draw(g));
               s.accept(new BoundingBox()).accept(new Draw(g));
@@ -49,15 +49,15 @@ public class Main {
       f.setContentPane(p);
       f.pack();
       f.setVisible(true);
-    } catch (Throwable ex) {
+    } catch (final Throwable ex) {
     }
     // now draw the same complex group of shapes by hand
     // (without the bounding box)
-    JFrame g = new JFrame();
+    final JFrame g = new JFrame();
     g.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    JPanel q =
+    final JPanel q =
         new JPanel() {
-          public void paintComponent(Graphics g) {
+          public void paintComponent(final Graphics g) {
             g.translate(-10, -60);
             g.translate(50, 100);
             g.drawArc(-20, -20, 40, 40, 0, 360);

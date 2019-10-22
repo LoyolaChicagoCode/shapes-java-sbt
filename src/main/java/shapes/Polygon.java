@@ -5,7 +5,7 @@ import java.util.List;
 /** A special case of a group consisting only of Points. */
 public class Polygon extends Group {
 
-  public Polygon(Point... points) {
+  public Polygon(final Point... points) {
     super(points);
   }
 
@@ -14,7 +14,7 @@ public class Polygon extends Group {
     return (List<? extends Point>) getShapes();
   }
 
-  public <Result> Result accept(ShapeVisitor<Result> v) {
+  public <Result> Result accept(final ShapeVisitor<Result> v) {
     // TODO your job
     return null;
   }

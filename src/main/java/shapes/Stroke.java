@@ -7,7 +7,7 @@ public class Stroke implements Shape {
 
   // TODO entirely your job
 
-  public Stroke(Color color, Shape shape) {}
+  public Stroke(final Color color, final Shape shape) {}
 
   public Color getColor() {
     return null;
@@ -17,7 +17,7 @@ public class Stroke implements Shape {
     return null;
   }
 
-  public <Result> Result accept(ShapeVisitor<Result> v) {
+  public <Result> Result accept(final ShapeVisitor<Result> v) {
     return null;
   }
 }

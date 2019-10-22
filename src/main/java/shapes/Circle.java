@@ -5,7 +5,7 @@ public class Circle implements Shape {
 
   protected final int radius;
 
-  public Circle(int radius) {
+  public Circle(final int radius) {
     assert radius >= 0;
     this.radius = radius;
   }
@@ -14,7 +14,7 @@ public class Circle implements Shape {
     return radius;
   }
 
-  public <Result> Result accept(ShapeVisitor<Result> v) {
+  public <Result> Result accept(final ShapeVisitor<Result> v) {
     return v.visitCircle(this);
   }
 }

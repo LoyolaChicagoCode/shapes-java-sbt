@@ -8,28 +8,28 @@ public class BoundingBox implements ShapeVisitor<Location> {
 
   // TODO entirely your job (except visitCircle)
 
-  public Location visitCircle(Circle c) {
+  public Location visitCircle(final Circle c) {
     int radius = c.getRadius();
     return new Location(-radius, -radius, new Rectangle(2 * radius, 2 * radius));
   }
 
-  public Location visitFilled(Filled f) {
+  public Location visitFilled(final Filled f) {
     return null;
   }
 
-  public Location visitGroup(Group g) {
+  public Location visitGroup(final Group g) {
     return null;
   }
 
-  public Location visitLocation(Location l) {
+  public Location visitLocation(final Location l) {
     return null;
   }
 
-  public Location visitRectangle(Rectangle r) {
+  public Location visitRectangle(final Rectangle r) {
     return null;
   }
 
-  public Location visitStroke(Stroke c) {
+  public Location visitStroke(final Stroke c) {
     return null;
   }
 }

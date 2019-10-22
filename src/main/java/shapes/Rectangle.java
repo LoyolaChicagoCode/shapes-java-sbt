@@ -5,7 +5,7 @@ public class Rectangle implements Shape {
 
   protected final int width, height;
 
-  public Rectangle(int width, int height) {
+  public Rectangle(final int width, final int height) {
     assert width >= 0;
     assert height >= 0;
     this.width = width;
@@ -20,7 +20,7 @@ public class Rectangle implements Shape {
     return height;
   }
 
-  public <Result> Result accept(ShapeVisitor<Result> v) {
+  public <Result> Result accept(final ShapeVisitor<Result> v) {
     return v.visitRectangle(this);
   }
 }

@@ -5,11 +5,11 @@ public class ExtendedBoundingBox extends BoundingBox implements ExtendedShapeVis
 
   // TODO entirely your job
 
-  public Location visitOutline(Outline o) {
+  public Location visitOutline(final Outline o) {
     return null;
   }
 
-  public Location visitPolygon(Polygon s) {
+  public Location visitPolygon(final Polygon s) {
     return null;
   }
 }

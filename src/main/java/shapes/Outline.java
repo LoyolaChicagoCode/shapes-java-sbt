@@ -7,7 +7,7 @@ public class Outline implements Shape {
 
   protected final Shape shape;
 
-  public Outline(Shape shape) {
+  public Outline(final Shape shape) {
     this.shape = shape;
   }
 
@@ -15,7 +15,7 @@ public class Outline implements Shape {
     return shape;
   }
 
-  public <Result> Result accept(ShapeVisitor<Result> v) {
+  public <Result> Result accept(final ShapeVisitor<Result> v) {
     // TODO your job
     return null;
   }

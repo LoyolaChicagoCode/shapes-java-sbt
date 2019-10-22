@@ -7,7 +7,7 @@ public class Location implements Shape {
 
   protected final Shape shape;
 
-  public Location(int x, int y, Shape shape) {
+  public Location(final int x, final int y, final Shape shape) {
     this.x = x;
     this.y = y;
     this.shape = shape;
@@ -25,7 +25,7 @@ public class Location implements Shape {
     return y;
   }
 
-  public <Result> Result accept(ShapeVisitor<Result> v) {
+  public <Result> Result accept(final ShapeVisitor<Result> v) {
     return v.visitLocation(this);
   }
 }

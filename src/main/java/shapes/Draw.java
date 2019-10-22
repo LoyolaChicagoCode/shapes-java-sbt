@@ -9,36 +9,36 @@ public class Draw implements ShapeVisitor<Void> {
 
   protected final Graphics g;
 
-  public Draw(Graphics g) {
+  public Draw(final Graphics g) {
     this.g = g;
   }
 
-  public Void visitCircle(Circle c) {
+  public Void visitCircle(final Circle c) {
     int r = c.getRadius();
     g.drawArc(-r, -r, 2 * r, 2 * r, 0, 360);
     return null;
   }
 
-  public Void visitStroke(Stroke c) {
+  public Void visitStroke(final Stroke c) {
     return null;
   }
 
-  public Void visitFilled(Filled f) {
+  public Void visitFilled(final Filled f) {
     return null;
   }
 
-  public Void visitGroup(Group g) {
+  public Void visitGroup(final Group g) {
     for (Shape s : g.getShapes()) {
       s.accept(this);
     }
     return null;
   }
 
-  public Void visitLocation(Location l) {
+  public Void visitLocation(final Location l) {
     return null;
   }
 
-  public Void visitRectangle(Rectangle r) {
+  public Void visitRectangle(final Rectangle r) {
     return null;
   }
 }

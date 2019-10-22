@@ -70,8 +70,8 @@ public class TestBoundingBox {
   }
 
   @Test
-  public void testGroupComplex() {
-    final Location b = complexGroup.accept(v);
+  public void testGroupComplex2() {
+    final Location b = complexGroup2.accept(v);
     final Rectangle r = (Rectangle) b.getShape();
     assertEquals(30, b.getX());
     assertEquals(80, b.getY());

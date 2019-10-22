@@ -11,7 +11,6 @@ import static shapes.Fixtures.*;
 
 public class TestDraw {
 
-  @Test
   public static void assertEquals(final BufferedImage i1, final BufferedImage i2) {
     final Raster u = i1.getData();
     final Raster v = i2.getData();
